@@ -2,7 +2,10 @@ import React from 'react';
 
 const PostAddForm = () => {
     return (
-        <div></div>
+        <form>
+            <input type='text' placeholder='О чем вы думаете сейчас?'/>
+            <button type='submit'>Добавить</button>
+        </form>
     )
 }
 

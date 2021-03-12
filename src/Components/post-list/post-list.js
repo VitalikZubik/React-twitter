@@ -1,8 +1,13 @@
 import React from 'react';
+import PostListItem from '../post-list-item';
 
 const PostList = () => {
     return (
-        <div></div>
+        <ul>
+            <PostListItem />
+            <PostListItem />
+            <PostListItem />
+        </ul>
     )
 }
 

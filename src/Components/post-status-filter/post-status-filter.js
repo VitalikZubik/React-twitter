@@ -2,7 +2,10 @@ import React from 'react';
 
 const PostStatusFilter = () => {
     return (
-        <div></div>
+        <div>
+            <button/>
+            <button/>
+        </div>
     )
 }
 
