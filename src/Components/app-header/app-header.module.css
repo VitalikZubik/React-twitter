@@ -1,0 +1,10 @@
+.wraper_app_header {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+
+.wraper_app_header h2 {
+    justify-self: end;
+    align-self: center;
+    font-size: 20px;
+}

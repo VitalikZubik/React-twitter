@@ -1,0 +1,11 @@
+.add_form {
+    display: grid;
+    grid-template-columns: 4.5fr 0.5fr;
+    margin-top: 15px;
+}
+
+.add_form input {
+    height: 25px;
+    padding: 0;
+    margin: 0;
+}

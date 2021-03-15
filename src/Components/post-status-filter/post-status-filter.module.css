@@ -1,0 +1,22 @@
+.wraper_filter button {
+    font-size: 16px;
+    height: 30px;
+}
+
+.all {
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 0px solid black;
+    margin-left: 5px;
+    border-radius: 4px 0px 0px 4px;
+    background-color: rgb(31, 194, 206);
+    color: white;
+    width: 30%;
+}
+
+.liked {
+    border: 1px solid black;
+    border-radius: 0px 4px 4px 0px;
+    width: 67%;
+}

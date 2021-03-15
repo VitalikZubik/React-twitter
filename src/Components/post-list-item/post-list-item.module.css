@@ -1,0 +1,23 @@
+.list_item {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    border: 1px solid grey;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+.list_item_label {
+    font-size: 18px;    
+    margin: 5px 0px 5px 0px;
+}
+
+.wraper_fa {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto;
+    gap: 10px;
+}
+
+.wraper_fa i {
+    font-size: 20px;
+}
