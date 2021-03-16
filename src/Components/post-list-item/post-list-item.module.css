@@ -9,6 +9,9 @@
 .list_item_label {
     font-size: 18px;    
     margin: 5px 0px 5px 0px;
+    line-height: 30px;
+    padding-left: 15px ;
+    cursor: pointer;
 }
 
 .wraper_fa {
@@ -20,4 +23,35 @@
 
 .wraper_fa i {
     font-size: 20px;
+}
+
+.btn_star  {
+    color: gold;
+}
+
+.btn_trash {
+    color: red;
+    
+}
+
+.heart{
+    align-self: center;
+    justify-self: center;
+    color: red;
+    transition: 0.3s all;
+    transform: translateX(30px);
+    opacity: 0;
+}
+
+.list_item.important .list_item_label {
+    color: gold;
+}
+  
+.list_item.important .btn_star {
+    color: grey;
+}
+
+.list_item.like .heart {
+    opacity: 1;
+    transform: translateX(0px);
 }

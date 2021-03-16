@@ -1,12 +1,12 @@
 import React from 'react';
 import style from './post-add-form.module.css';
 
-const PostAddForm = () => {
+const PostAddForm = ({onAdd}) => {
     return (
-        <form className={style.add_form}>
+        <div className={style.add_form}>
             <input type='text' placeholder='О чем вы думаете сейчас?'/>
-            <button type='submit'>Добавить</button>
-        </form>
+            <button onClick={() => onAdd('Hello')} type='submit'>Добавить</button>
+        </div>
     )
 }
 
