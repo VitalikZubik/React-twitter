@@ -4,28 +4,12 @@ import style from './post-list-item.module.css';
 export default class PostListItem extends React.Component{
     constructor(props) {
         super(props);
-        this.state = {
-            important: false,
-            like: false
-        }
-    }
-
-    onImportant = () => {
-        this.setState(({important}) => ({
-            important: !important
-        }))
-    }
-
-    onLike = () => {
-        this.setState(({like}) => ({
-            like: !like
-        }))
     }
 
     render() {
         let classNames = `${style.list_item}`;
-        const {label, onDelete} = this.props;
-        const {important, like} = this.state;
+        const {label, onDelete, onToggleImportant, onToggleLiked, important, like} = this.props;
+        
 
         if(important) {
             classNames += ` ${style.important}`
@@ -37,12 +21,12 @@ export default class PostListItem extends React.Component{
 
         return (
             <div className={classNames}>
-                <span onClick={this.onLike} className={style.list_item_label}>
+                <span onClick={onToggleLiked} className={style.list_item_label}>
                     {label}
                 </span>
                 <div className={style.wraper_fa}>
                     <button
-                        onClick={this.onImportant} 
+                        onClick={onToggleImportant} 
                         type='botton'
                         className={style.btn_star}>
                         <i className='fa fa-star'></i></button>

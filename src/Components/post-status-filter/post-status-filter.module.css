@@ -3,20 +3,24 @@
     height: 30px;
 }
 
-.all {
+.wraper_filter button:first-child {
     border-top: 1px solid black;
     border-left: 1px solid black;
     border-bottom: 1px solid black;
     border-right: 0px solid black;
     margin-left: 5px;
     border-radius: 4px 0px 0px 4px;
-    background-color: rgb(31, 194, 206);
-    color: white;
     width: 30%;
 }
 
-.liked {
+.wraper_filter button:last-child {
     border: 1px solid black;
     border-radius: 0px 4px 4px 0px;
     width: 67%;
 }
+
+.active {
+    background-color: rgb(31, 194, 206);
+    color: white;
+}
+

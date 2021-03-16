@@ -1,13 +1,42 @@
 import React from 'react';
 import style from './post-add-form.module.css';
 
-const PostAddForm = ({onAdd}) => {
-    return (
-        <div className={style.add_form}>
-            <input type='text' placeholder='О чем вы думаете сейчас?'/>
-            <button onClick={() => onAdd('Hello')} type='submit'>Добавить</button>
-        </div>
-    )
-}
+export default class PostAddForm extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            text: ''
+        }
+    }
 
-export default PostAddForm;
+    onValueChange = (e) => {
+        this.setState({
+            text: e.target.value
+        })
+    }
+
+    onSubmit = (e) => {
+        e.preventDefault();
+        this.props.onAdd(this.state.text);
+        this.setState({
+            text: ''
+        })
+    }
+
+    render() {
+        return (
+            <form
+                className={style.add_form}
+                onSubmit={this.onSubmit}>
+                <input
+                    type='text'
+                    placeholder='О чем вы думаете сейчас?'
+                    onChange={this.onValueChange}
+                    value={this.state.text} />
+                <button
+                    type='submit'                    >
+                    Добавить</button>
+            </form>
+        )
+    }
+}
